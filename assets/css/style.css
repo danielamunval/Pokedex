@@ -1,19 +1,57 @@
-   :root {
-            font-family: 'Segoe UI', sans-serif;
-        }
+:root {
+  font-family: 'Segoe UI', sans-serif;
+}
 
-        .card-title {
-            font-weight: bold;
-        }
+.card-title {
+  font-weight: bold;
+}
 
-        .bg-fire {
-            background-color: #ffddc1 !important;
-        }
+/* Tipos */
+.bg-fire { background-color: #ffddc1 !important; }
+.bg-water { background-color: #c1e0ff !important; }
+.bg-grass { background-color: #d1ffc1 !important; }
+.bg-electric { background-color: #fef3b2 !important; }
+.bg-psychic { background-color: #f8c0e0 !important; }
+.bg-rock { background-color: #e4d3ba !important; }
+.bg-normal { background-color: #e0e0e0 !important; }
 
-        .bg-water {
-            background-color: #c1e0ff !important;
-        }
+/* Tarjetas */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
 
-        .bg-grass {
-            background-color: #d1ffc1 !important;
-        }
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* Animación */
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Botones de tipo */
+#filtrosTipo .btn {
+  border-radius: 20px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+#filtrosTipo .btn:hover {
+  transform: scale(1.05);
+  background-color: #e0e0e0;
+}
