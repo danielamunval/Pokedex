@@ -31,19 +31,19 @@
             div.classList.add("col");
 
             const tipoPrincipal = pokemon.tipos[0];
-            const tipoClase = tipoPrincipal ? `bg-${tipoPrincipal}` : "";
+            const tipoClase = tipoPrincipal ? `bg-${tipoPrincipal}` : "bg-default";
 
-            div.innerHTML = `
-            <div class="card h-100 shadow-sm \${tipoClase}">
-                <img src="\${pokemon.imagen}" class="card-img-top bg-white" style="object-fit: contain; height: 200px;" alt="\${pokemon.nombre}"/>
-                <div class="card-body">
-                    <h5 class="card-title text-capitalize">\${pokemon.nombre}</h5>
-                    <p class="card-text"><strong>Tipo:</strong> \${pokemon.tipo}</p>
-                    <p class="card-text"><strong>Exp:</strong> \${pokemon.experiencia}</p>
-                    <p class="card-text"><strong>Peso:</strong> \${pokemon.peso} | <strong>Altura:</strong> \${pokemon.altura}</p>
-                </div>
-            </div>
-            ` ; 
+              div.innerHTML = `
+             <div class="card h-100 shadow-sm ${tipoClase}">
+               <img src="${pokemon.imagen}" class="card-img-top bg-white" style="object-fit: contain; height: 200px;" alt="${pokemon.nombre}"/>
+              <div class="card-body">
+            <h5 class="card-title text-capitalize">${pokemon.nombre}</h5>
+            <p class="card-text"><strong>Tipo:</strong> ${pokemon.tipo}</p>
+            <p class="card-text"><strong>Exp:</strong> ${pokemon.experiencia}</p>
+            <p class="card-text"><strong>Peso:</strong> ${pokemon.peso / 10} kg | <strong>Altura:</strong> ${pokemon.altura / 10} m</p>
+        </div>
+    </div>
+    `; 
 
             return div;
         }
