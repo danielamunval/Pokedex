@@ -1,5 +1,13 @@
+body{
+  background-color: #f8f9fa;
+}
+
 :root {
   font-family: 'Segoe UI', sans-serif;
+}
+
+.container py-4 {
+  max-width: 960px
 }
 
 .card-title {
